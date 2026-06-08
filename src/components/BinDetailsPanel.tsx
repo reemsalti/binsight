@@ -561,7 +561,7 @@ export function BinDetailsPanel({
               )}
 
               <p className="text-xs leading-relaxed text-slate-500">
-                Demo data only. Company names are used for sample portfolio
+                Sample data only. Brand names used for portfolio visualization.
                 visualization.
               </p>
             </div>
