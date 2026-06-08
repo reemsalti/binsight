@@ -56,7 +56,7 @@ function Section({
   return <DetailSection title={title} id={id}>{children}</DetailSection>;
 }
 
-function DemoActionButton({
+function PanelActionButton({
   label,
   onClick,
   disabled = false,
@@ -70,10 +70,9 @@ function DemoActionButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className="flex w-full flex-col items-start rounded-lg border border-slate-200 bg-white px-3 py-2 text-left type-emphasis transition hover:border-slate-400 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+      className="flex w-full items-center rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-left type-emphasis transition hover:border-slate-400 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
     >
       {label}
-      <span className="type-muted mt-0.5">Demo action</span>
     </button>
   );
 }
@@ -99,7 +98,7 @@ function BinActionsSection({
 
   if (isOccupied && canViewInventory) {
     actions.push(
-      <DemoActionButton
+      <PanelActionButton
         key="view-inventory"
         label="View inventory details"
         onClick={() =>
@@ -113,7 +112,7 @@ function BinActionsSection({
 
   if (canViewHistory) {
     actions.push(
-      <DemoActionButton
+      <PanelActionButton
         key="view-history"
         label="View location history"
         onClick={onViewHistory}
@@ -123,7 +122,7 @@ function BinActionsSection({
 
   if (canReport) {
     actions.push(
-      <DemoActionButton
+      <PanelActionButton
         key="report"
         label="Report misplaced stock"
         onClick={onReport}

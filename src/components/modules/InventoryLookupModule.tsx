@@ -78,8 +78,8 @@ export function InventoryLookupModule({
       </form>
 
       <p className="mt-3 type-muted">
-        Demo search scans stock-on-hand and load references (receipt / outbound
-        order) across the warehouse snapshot.
+        Searches stock-on-hand and load references (receipt / outbound order)
+        across the warehouse snapshot.
       </p>
 
       {hasSearched && (

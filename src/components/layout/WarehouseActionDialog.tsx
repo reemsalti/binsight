@@ -224,7 +224,7 @@ export function WarehouseActionDialog({ action, onClose, onSubmitted }: Props) {
         </div>
 
         <p className="type-muted mt-3">
-          Demo only — transaction is not sent to a live WMS.
+          Simulated workflow — uses the mock service layer in this portfolio build.
         </p>
 
         <div className="mt-4 flex justify-end gap-2">

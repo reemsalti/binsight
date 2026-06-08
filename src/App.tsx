@@ -366,7 +366,7 @@ export default function App() {
   return (
     <main className="surface-page flex h-dvh flex-col overflow-hidden text-slate-900">
       <p className="shrink-0 border-b border-slate-200/80 bg-white/80 px-4 py-1.5 text-center type-muted backdrop-blur-sm">
-        Demo data only. Company names are used for sample portfolio visualization.
+        Portfolio demo — sample data only. Brand names used for visualization.
       </p>
 
       <AppToolbar

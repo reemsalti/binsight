@@ -4,7 +4,18 @@
 
 A frontend portfolio project — a mock **warehouse operations console** for inventory control teams. Demonstrates complex WMS workflows (work queues, bin maps, staging docks, PLT traceability, investigations) with a clean, operations-first UI.
 
-> Demo data only. Brand names (L'Oréal, LEGO, Kellogg's) are fictional portfolio samples.
+> **Full source code is public** under `src/` — intended for employer review. Sample data only; brand names are fictional.
+
+## For reviewers
+
+This repo is meant to be read, not just clicked through:
+
+- **`src/App.tsx`** — shell, routing, state wiring
+- **`src/services/wmsApi.ts`** — mock API shaped like a real WMS integration layer
+- **`src/components/`** — modules, blueprint, panels, shared UI
+- **`src/mock-data/`** — deterministic demo snapshot generator
+
+Internal agent notes and one-off setup scripts stay local (not in the repo).
 
 ## Highlights
 
