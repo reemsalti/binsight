@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "BinSight — mock WMS operations console for inventory control (React + TypeScript)",
+  "homepage": "https://reemsalti.github.io/binsight/",
   "type": "module",
   "engines": {
     "node": ">=22"

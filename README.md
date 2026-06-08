@@ -1,37 +1,29 @@
 # BinSight
 
-Mock warehouse-side **WMS operations console** for inventory control — work queue, bin visibility, staging docks, PLT traceability, investigations, holds, and stock reports. Built as a **frontend portfolio piece** with a swappable mock API layer (`wmsApi.ts`).
+**Live demo:** [reemsalti.github.io/binsight](https://reemsalti.github.io/binsight/)
 
-> **Demo only.** Company names (L'Oréal, LEGO, Kellogg's) are sample data for visualization.
+A frontend portfolio project — a mock **warehouse operations console** for inventory control teams. Demonstrates complex WMS workflows (work queues, bin maps, staging docks, PLT traceability, investigations) with a clean, operations-first UI.
 
-## Live demo
+> Demo data only. Brand names (L'Oréal, LEGO, Kellogg's) are fictional portfolio samples.
 
-Deploy `dist/` after `npm run build`, or run locally (see below).
+## Highlights
 
-## Features
-
-- **Work queue** — reports, holds, investigations, putaway, outbound staging
-- **Rack + staging blueprints** — instage/outstage open-floor docks, aisle heatmap
-- **PLT journey** — activity log, operators, full-page detail view
-- **RCV / ORD breakdown** — receipt and order drill-down
-- **Investigation item counts** — floor recounts after order picks
-- **Stock reports** — scenario-driven floor issue filing
+- **Work queue** — triage reports, holds, investigations, putaway, and outbound staging
+- **Rack + staging blueprints** — aisle heatmap, instage/outstage dock floors
+- **PLT journey** — activity log with operators, expandable full-page detail
+- **RCV / ORD drill-down** — receipt and order line breakdown
+- **Investigation counts** — floor recounts after order picks
+- **Stock reports** — scenario-driven issue filing from the floor
 
 ## Tech stack
 
-| Layer | Technology |
-|-------|------------|
-| UI | React 19, TypeScript, Tailwind CSS |
-| Build | Vite 8 |
-| Icons | Lucide React |
-| Data | Mock service layer (no backend) |
+React 19 · TypeScript · Vite 8 · Tailwind CSS · Lucide React
 
-## Requirements
+Mock service layer in `src/services/wmsApi.ts` — structured for future API swap, no backend required.
 
-- **Node.js 22+** (see `.nvmrc`)
-- npm 10+
+## Run locally
 
-## Quick start
+**Requirements:** Node.js 22+ (see `.nvmrc`)
 
 ```bash
 git clone https://github.com/reemsalti/binsight.git
@@ -40,38 +32,24 @@ npm ci
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173). Use **Refresh** in the toolbar to reload mock WMS data.
+Open [http://localhost:5173](http://localhost:5173). Click **Refresh** in the toolbar to reload mock WMS data.
 
 ```bash
-npm run build    # production build → dist/
+npm run build    # production build
 npm run preview  # preview production build
 ```
 
-## Project structure
+## Project layout
 
 ```
 src/
-  components/     UI modules, blueprint, panels
-  services/       wmsApi.ts — mock API (swap for HTTP later)
-  mock-data/      Deterministic demo snapshot generator
-  utils/          Blueprint, staging, reports, labels
-  config/         Nav, warehouse actions
-PROJECT_BRIEF.md  Architecture & requirements (source of truth)
+  components/   UI modules, blueprint, side panels
+  services/     Mock WMS API
+  mock-data/      Deterministic demo snapshot
+  utils/          Blueprint, staging, reports
+  config/         Navigation and actions
 ```
-
-## Branching (simple)
-
-| Branch | Purpose |
-|--------|---------|
-| `main` | Stable, deployable code — **default** |
-| `feature/*` | Optional: one feature per branch, merge via PR |
-
-No staging/production environments yet — this is a static frontend with mock data. GitHub Actions runs `npm run build` on every push to `main`.
-
-## Documentation
-
-See **[PROJECT_BRIEF.md](./PROJECT_BRIEF.md)** for module behavior, location formats, mock data rules, and changelog.
 
 ## License
 
-Private portfolio project — all rights reserved unless otherwise specified.
+Portfolio project — all rights reserved.

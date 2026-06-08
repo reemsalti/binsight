@@ -5,10 +5,13 @@ node_modules/
 dist/
 .vite/
 
-# Environment
+# Environment & secrets
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+credentials.json
 
 # OS / editor
 .DS_Store
@@ -28,5 +31,7 @@ npm-debug.log*
 # Test / coverage
 coverage/
 
-# Local tooling
+# Local / internal (not published)
 .cursor/
+PROJECT_BRIEF.md
+scripts/
